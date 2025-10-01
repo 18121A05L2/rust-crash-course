@@ -16,7 +16,7 @@ struct Empty;
 #[derive(Debug)]
 struct Circle {
     center: Point,
-    radius: u32,
+    radius: Option<u32>,
 }
 
 fn main() {
@@ -34,7 +34,7 @@ fn main() {
 
     let circle = Circle {
         center: Point { x: 0.0, y: 0.0 },
-        radius: 3,
+        radius: Some(2),
     };
     println!("{:?}", circle);
 

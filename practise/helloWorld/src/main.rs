@@ -38,6 +38,7 @@ fn main() {
     // ---------------------------- Arrays and Tuples ---------------------------
 
     let arr = [1u32, 2, 3];
+    let b = arr.len();
 
     println!("The value of arr[0] is {}", arr[1]);
     println!("length of the arr is {}", arr.len());
@@ -46,8 +47,8 @@ fn main() {
 
     println!("The value of tuple.0 is {}", tuple.0);
 
-    let zeroArray = [0; 10];
-    println!("{:?}", zeroArray);
+    let zero_array = [0; 10];
+    println!("{:?}", zero_array);
 
     // ----------------------------- Strings -----------------------------
 
@@ -160,4 +161,11 @@ fn main() {
         println!("{}", x);
     }
     test_scope();
+
+    // ---------------------- dereferencing -----------------------
+    let mut x = 5;
+    let y = &mut x;
+
+    *y += 1; // ✅ must dereference to modify
+    println!("{}", *y); // ✅ must dereference to read as a value
 }

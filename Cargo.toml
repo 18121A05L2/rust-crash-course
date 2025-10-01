@@ -1,4 +1,5 @@
 [workspace]
+resolver = "3"
 members = [
     "practise/helloWorld",
     "topics/array/exercises",
@@ -35,4 +36,8 @@ members = [
     "topics/scalar/solutions",
     "topics/array/solutions",
     "topics/enum_type/solutions",
+    "topics/vector/solutions",
+    "topics/struct_type/solutions",
+    "topics/hash_map/solutions",
+    "topics/for_loop/solutions",
 ]
