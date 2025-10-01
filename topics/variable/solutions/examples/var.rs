@@ -33,6 +33,6 @@ fn main() {
     println!("{0} + {0} = {1}", x, x + x);
     // Debug - useful for complex types
     println!("x: {:?}", x);
-    // Debug with easy to read line breaks
+    // Debug with easy to read line breaks ( pretty debug )
     println!("x: {:#?}", x);
 }

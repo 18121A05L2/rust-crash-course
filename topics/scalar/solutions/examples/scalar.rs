@@ -45,6 +45,7 @@ fn main() {
     // Overflow
     let mut u: u32 = u32::MAX;
     u += 1;
+
     // Overflow doesn't panic when compiled with --release
     println!("u32 silent overflow: {}", u);
 
@@ -53,4 +54,6 @@ fn main() {
 
     // Explicitly allow overflow
     println!("u32 allow overflow: {}", u32::wrapping_add(u32::MAX, 1));
+
+    println!("i32 check underflow: {:?}", i32::checked_sub(i32::MIN, 1));
 }

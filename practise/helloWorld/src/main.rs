@@ -1,8 +1,18 @@
+#![allow(unused)]
+
+//  let y = 5; // this will throw an error
+const NUM: i32 = 5;
+
 use std::fs::File;
 fn main() {
     println!("Hello, world!");
     let x = 5;
     // x = 10; this will be an error
+    println!("The value of x is {}", x);
+    // inline
+    println!("The value of x is {x}");
+    // positional arguments
+    println!("The value of {0} + {0} = {1}", x, x + x);
 
     let x: i32 = x + 1; // shadowing
 
@@ -13,6 +23,11 @@ fn main() {
     const MAX_POINTS: u32 = 100_000;
 
     const STRING: &str = "Hello";
+
+    let unsigned_max: u32 = u32::MAX;
+    let signed_max: i32 = i32::MAX;
+    println!("{}", unsigned_max);
+    println!("{}", signed_max);
 
     let _a = "a";
 
@@ -138,7 +153,7 @@ fn main() {
         let mut x = String::from("hello");
         test_clone(x.clone());
         test_func_borrowing(&x);
-        test_func_borrowing(&mut x); // mutable using borrowing 
+        test_func_borrowing(&mut x); // mutable using borrowing
         println!("{}", x);
     }
     test_scope();
