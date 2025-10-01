@@ -33,4 +33,6 @@ members = [
     "topics/variable/exercises",
     "topics/vector/exercises",
     "topics/scalar/solutions",
+    "topics/array/solutions",
+    "topics/enum_type/solutions",
 ]

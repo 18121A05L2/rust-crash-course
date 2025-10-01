@@ -46,6 +46,9 @@ fn main() {
 
     println!("The value of tuple.0 is {}", tuple.0);
 
+    let zeroArray = [0; 10];
+    println!("{:?}", zeroArray);
+
     // ----------------------------- Strings -----------------------------
 
     fn test_string(s: String) -> String {

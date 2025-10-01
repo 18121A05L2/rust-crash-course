@@ -1,6 +1,6 @@
 #![allow(unused)]
 
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq)] // Attribute that uses a built-in macro
 enum Command {
     Play,
     Stop,
@@ -12,6 +12,7 @@ enum Command {
 fn main() {
     let cmd = Command::Play;
     let cmd = Command::Skip(60);
+    println!("{:?}", cmd);
     let cmd = Command::Resize {
         width: 500,
         height: 300,
@@ -25,6 +26,7 @@ fn main() {
     let cmd1 = Command::Stop;
     println!("{:?} == {:?}  ? {}", cmd0, cmd1, cmd0 == cmd1);
 
+    // TODO : need to go through again
     // Option<T> = Some(T) | None
     let x: Option<i32> = Some(-1);
     let x: Option<i32> = None;
