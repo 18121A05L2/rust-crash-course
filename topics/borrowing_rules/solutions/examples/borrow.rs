@@ -23,7 +23,7 @@ fn main() {
     // let s2 = &mut s;
     s1.push_str("🦀");
     println!("{s}");
-
+    //Todo : need to go through this again
     // Mutable borrow - example 2
     // This will compile - multiple mutable reference to s but not simultaneously
     let mut s = String::from("rust");

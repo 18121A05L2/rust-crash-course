@@ -40,4 +40,5 @@ members = [
     "topics/struct_type/solutions",
     "topics/hash_map/solutions",
     "topics/for_loop/solutions",
+    "topics/borrowing_rules/solutions",
 ]

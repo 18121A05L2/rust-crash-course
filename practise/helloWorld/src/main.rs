@@ -168,4 +168,15 @@ fn main() {
 
     *y += 1; // ✅ must dereference to modify
     println!("{}", *y); // ✅ must dereference to read as a value
+
+    // ----------------------- Others ----------------------------
+
+    let mut s = String::from("hello");
+    let s2 = &mut s;
+    let s1 = &mut s;
+    // s2.push_str(" world");
+
+    // s2.push_str(" world");
+
+    println!("{}", s1);
 }
