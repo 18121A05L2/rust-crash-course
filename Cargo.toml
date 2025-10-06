@@ -41,4 +41,8 @@ members = [
     "topics/hash_map/solutions",
     "topics/for_loop/solutions",
     "topics/borrowing_rules/solutions",
+    "topics/unwrap/solutions",
+    "topics/question/solutions",
+    "topics/trait_basic/solutions",
+    "topics/generic_trait/solutions",
 ]

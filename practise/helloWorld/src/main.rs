@@ -169,6 +169,25 @@ fn main() {
     *y += 1; // ✅ must dereference to modify
     println!("{}", *y); // ✅ must dereference to read as a value
 
+    // -----------------------Module ------------------------------
+
+    mod root {
+        mod test_mod {
+            pub fn test() {
+                println!("test");
+            }
+        }
+        mod tes_mod2 {
+            use super::super::test_mod as fromRoot;
+            use super::test_mod;
+            pub fn test() {
+                test_mod::test();
+                fromRoot::test();
+                println!("test");
+            }
+        }
+    }
+
     // ----------------------- Others ----------------------------
 
     let mut s = String::from("hello");
@@ -179,4 +198,17 @@ fn main() {
     // s2.push_str(" world");
 
     println!("{}", s1);
+}
+
+mod test_mod {
+    pub fn test() {
+        println!("test");
+    }
+}
+
+mod tes_mod2 {
+    use super::test_mod;
+    pub fn test() {
+        println!("test");
+    }
 }

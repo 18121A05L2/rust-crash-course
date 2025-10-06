@@ -1,8 +1,8 @@
 #[derive(Debug)]
-struct Config {
-    url: &str,
+struct Config<'a> {
+    url: &'a str,
     port: u32,
-    db_url: &str,
+    db_url: &'a str,
 }
 
 // Lifetime 'a can be omitted. Rust can automatically figure out the lifetime
@@ -13,6 +13,7 @@ fn log(config: &Config) {
 
 fn main() {
     let config = Config {
+        // when config is created 'a inside the Config will be the life time of this Config instance block
         url: "localhost",
         port: 3000,
         db_url: "db://localhost",

@@ -1,15 +1,15 @@
-pub fn first(t: (u32, i32)) -> u32 {
+pub fn first<T1, T2>(t: (T1, T2)) -> T1 {
     t.0
 }
 
-pub fn last(t: (u32, i32)) -> i32 {
+pub fn last<T1, T2>(t: (T1, T2)) -> T2 {
     t.1
 }
 
 #[derive(Debug)]
-pub struct Rectangle {
-    pub top: u32,
-    pub left: u32,
-    pub width: u32,
-    pub height: u32,
+pub struct Rectangle<T> {
+    pub top: T,
+    pub left: T,
+    pub width: T,
+    pub height: T,
 }

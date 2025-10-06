@@ -7,11 +7,18 @@ pub struct Rectangle {
 }
 
 impl Rectangle {
+    // static method
     pub fn new(width: u32, height: u32) -> Self {
-        todo!();
+        Self {
+            top: 0,
+            left: 0,
+            width,
+            height,
+        }
     }
-
+    // method - takes first argument as self
     pub fn move_to(&mut self, top: u32, left: u32) {
-        todo!();
+        self.top = top;
+        self.left = left;
     }
 }
