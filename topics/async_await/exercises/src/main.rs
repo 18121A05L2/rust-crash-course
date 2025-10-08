@@ -9,8 +9,8 @@ fn add(x: u32, y: u32) -> u32 {
     sleep(Duration::from_millis(1000));
     x + y
 }
-
-fn main() {
+#[tokio::main]
+async fn main() {
     hello();
 
     let sum = add(1, 2);

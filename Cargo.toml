@@ -45,4 +45,7 @@ members = [
     "topics/question/solutions",
     "topics/trait_basic/solutions",
     "topics/generic_trait/solutions",
+    "topics/iterator_adaptors/solutions",
+    "topics/async_await/solutions",
+    "topics/join_select/solutions",
 ]
