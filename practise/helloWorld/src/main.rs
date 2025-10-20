@@ -3,8 +3,11 @@
 //  let y = 5; // this will throw an error
 const NUM: i32 = 5;
 
-use std::fs::File;
+// static NUM2: i32 = 5;
+
+use std::{fs::File, u32};
 fn main() {
+    static NUM2: i32 = 5;
     println!("Hello, world!");
     let x = 5;
     // x = 10; this will be an error
@@ -198,6 +201,51 @@ fn main() {
     // s2.push_str(" world");
 
     println!("{}", s1);
+
+    // const A: String = "name".to_string(); // compile error
+
+    let v = vec![10, 20, 30];
+    // Indexing
+    println!("{}", v[0]); // 10
+    // Safe access (returns Option)
+    if let Some(val) = v.get(1) {
+        println!("Value: {}", val);
+    }
+
+    let a = u32::MAX;
+    let b = a.checked_add(10);
+    let c = a.saturating_add(100);
+    println!(" a:{} b :{:?} c:{}", a, b, c); // Option", a, b);
+
+    let a = [1, 2, 3];
+    let b = a.len();
+
+    let testCopyTrade = ["str"];
+    let b = testCopyTrade;
+    let c = println!("testCopyTrade:{:?}, b:{:?}", testCopyTrade, b);
+
+    struct Point<T> {
+        x: T,
+        y: T,
+    }
+
+    impl<T> Point<T> {
+        fn get_x(&self) -> &T {
+            &self.x
+        }
+    }
+
+    impl Point<i32> {
+        fn sum(&self) -> i32 {
+            self.x + self.y
+        }
+    }
+
+    use std::fmt::Display;
+
+    fn print_value<T: Display>(x: T) {
+        println!("{}", x); // ✅ works, because T implements Display
+    }
 }
 
 mod test_mod {
@@ -205,6 +253,7 @@ mod test_mod {
         println!("test");
     }
 }
+// println!("{}", NUM2); // Error
 
 mod tes_mod2 {
     use super::test_mod;

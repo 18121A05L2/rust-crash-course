@@ -1,4 +1,3 @@
-// TODO :: pending
 pub trait Iterator<T> {
     fn next(&mut self) -> Option<&T>;
 }
@@ -15,6 +14,24 @@ pub struct VecIter<T> {
 
 impl<T> Iterator<T> for TupleIter<T> {
     fn next(&mut self) -> Option<&T> {
-        todo!();
+        let next = self.next;
+        self.next += 1;
+
+        match next {
+            0 => Some(&self.tuple.0),
+            1 => Some(&self.tuple.1),
+            2 => Some(&self.tuple.2),
+            _ => None,
+        }
+    }
+}
+
+impl<T> Iterator<T> for VecIter<T> {
+    fn next(&mut self) -> Option<&T> {
+        let next = self.next;
+
+        self.next += 1;
+
+        self.vec.get(next)
     }
 }
