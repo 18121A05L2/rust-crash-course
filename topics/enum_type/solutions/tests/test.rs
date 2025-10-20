@@ -1,4 +1,4 @@
-use enum_type::*;
+use enum_type_sol::*;
 
 #[test]
 fn test_color() {
