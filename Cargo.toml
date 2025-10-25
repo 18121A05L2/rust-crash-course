@@ -48,4 +48,5 @@ members = [
     "topics/iterator_adaptors/solutions",
     "topics/async_await/solutions",
     "topics/join_select/solutions",
+    "topics/lifetime/solutions",
 ]
